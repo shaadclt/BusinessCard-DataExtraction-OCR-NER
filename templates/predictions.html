@@ -1,0 +1,41 @@
+{% extends 'index.html' %}
+
+{% block body %}
+<br><br>
+
+<div class="row">
+    <div class="col">
+        <img class="img-fluid border border-primary" src="/static/media/magic_color.jpg" alt="magic color image">
+    </div>
+
+    <div class="col">
+        <img class="img-fluid border border-primary" src="/static/media/bounding_box.jpg" alt="bounding box image">
+
+    </div>
+
+</div>
+
+<br><br>
+<div class="row">
+    <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <th>Entitites</th>
+                <th>Extracted Text</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for key,value in results.items() %}
+                <tr>
+                    <td>{{ key }}</td>
+                    <td>{{ value }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+
+{% endblock  %}

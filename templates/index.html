@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/static/js/doc_scan.js"></script>
+    <title>Document Scan</title>
+    <style>
+        /* Custom CSS Styles */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+    
+        body {
+            display: flex;
+            flex-direction: column;
+            background-image: url("static/images/bg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    
+        .content {
+            flex: 1 0 auto;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px); /* For Safari support */
+            background-color: rgba(255, 255, 255, 0.5); /* Adjust the opacity as needed */
+        }
+    
+        hr {
+            border-color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a href="/" class="navbar-brand">
+                <h1 class="display-7"> 
+                    Business Card Data Extraction with OCR and NER
+                </h1>
+            </a>
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">
+                        About
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% block body %}
+        <h3>Welcome to Document Scanner App</h3>
+        {% endblock  %}
+    </div>
+  <!-- Footer -->
+  <footer class="footer mt-auto py-3 bg-dark text-white">
+    <div class="container text-center">
+        <p>
+            &copy; 2023 Mohamed Shaad | <a href="https://imshaad.in/">Developed by Mohamed Shaad</a>
+        </p>
+    </div>
+</footer>
+</body>
+</html>

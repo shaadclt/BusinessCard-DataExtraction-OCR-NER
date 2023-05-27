@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/static/js/doc_scan.js"></script>
+    <title>Document Scan</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a href="/" class="navbar-brand">
+                <h1 class="display-7"> 
+                    Business Card Data Extraction with OCR and NER
+                </h1>
+            </a>
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">
+                        About
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<br>
+<div class="container">
+<h3>Business Card Data Extraction with OCR and NER</h3>
+
+    <p> 
+        The main objective of this app is to extract entities from the scanned documents like invoice, 
+        Business Card, Shipping Bill, Bill of Lading documents etc. However, 
+        for the sake of data privacy I have restricted my view to Business Card. 
+        But the framework can be utilized to extract data from all kinds of financial documents. 
+        To develop this project two main technologies in data science were used</p>
+        <ol>
+            <li>Computer Vision</li>
+            <li>Natural Language Processing</li>
+        </ol>
+        
+    <p>
+        In Computer Vision module, the document is scanned to identify the location of text and text is extracted from the image. 
+        Then in Natural language processing, 
+        the entitles from the text are extracted and necessary text cleaning is done and the entities are parsed from the text.
+    </p> 
+        
+    <p><strong>Python Libraries used in Computer Vision Module.</strong></p> 
+    <ul>
+        <li>OpenCV</li>
+        <li>Numpy</li>
+        <li>Pytesseract</li>
+    </ul>
+    <p><strong>Python Libraries used in Natural Language Processing</strong></p>
+    <ul>
+        <li>SpaCy</li>
+        <li>Pandas</li>
+        <li>Regular Expression</li>
+        <li>String</li>
+    </ul>
+        
+    <p>
+        <strong>Stage -1: Setup the project by doing the necessary installations and requirements.</strong>
+        <ul>
+            <li>Install Python</li>
+            <li>Install Dependencies</li>
+        </ul>
+
+    </p>
+    <p>
+        <strong>Stage -2: Do data preparation. Extract text from images using Pytesseract and also do necessary cleaning.</strong>
+        <ul>
+            <li>Gather Images</li>
+            <li>Overview on Pytesseract</li>
+            <li>Extract Text from all Image</li>
+            <li>Clean and Prepare text</li>
+        </ul>
+    </p>
+    <p>
+       <strong>Stage -3: Label NER data using BIO tagging.</strong> 
+        <ul>
+            <li>Manually Labeling with BIO technique
+                <ul>
+                    <li>B - Beginning</li>
+                    <li>I  -  Inside</li>
+                    <li>O - Outside</li>
+                </ul>
+            </li>
+        </ul>
+    </p>
+        
+    <p>
+        <strong>Stage -4: Clean the text and preprocess the data to train machine learning.</strong>
+        <ul>
+            <li>Prepare Training Data for Spacy</li>
+            <li>Convert data into spacy format</li>
+        </ul>
+    </p>
+
+    <p>
+        <strong>Stage -5: Train the Named Entity model with the preprocessed data.</strong>
+        <ul>
+            <li>Configuring NER Model</li>
+            <li>Train the model</li>
+        </ul>
+    </p>
+        
+    <p>
+        <strong>Stage -6: Predict the entitles using NER model and create data pipeline for parsing text.</strong>
+        <ul>
+            <li>Load Model</li>
+            <li>Render and Serve with Displacy</li>
+            <li>Draw Bounding Box on Image</li>
+            <li>Parse Entitles from Text</li>
+        </ul>
+    </p>
+        
+    <h4>Finally, put all together and create document scanner app.</h4>
+</div>
+</body>
+</html>
