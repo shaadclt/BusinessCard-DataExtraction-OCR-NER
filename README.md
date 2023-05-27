@@ -26,10 +26,10 @@ pip install -r requirements_app.txt
 git clone https://github.com/shaadclt/BusinessCard-DataExtraction-OCR-NER.git
 ```
 
-2. Run the `main.py` script:
+2. Run the `app.py` script:
 
 ```
-python main.py
+python app.py
 ```
 
 3. The extracted data will be displayed on the console.
