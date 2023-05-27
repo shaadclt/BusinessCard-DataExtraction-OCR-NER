@@ -32,7 +32,7 @@ git clone https://github.com/shaadclt/BusinessCard-DataExtraction-OCR-NER.git
 python main.py
 ```
 
-4. The extracted data will be displayed on the console.
+3. The extracted data will be displayed on the console.
 
 ## How It Works
 
