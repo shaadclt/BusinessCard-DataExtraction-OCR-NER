@@ -6,3 +6,4 @@ pytesseract
 spacy
 imutils
 gunicorn
+scipy
