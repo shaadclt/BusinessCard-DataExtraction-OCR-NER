@@ -15,7 +15,7 @@ warnings.filterwarnings('ignore')
 ### Load NER model
 model_ner = spacy.load('./output/model-best/')
 
-
+pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
 def cleanText(txt):
     whitespace = string.whitespace
     punctuation = "!#$%&\'()*+:;<=>?[\\]^`{|}~"
