@@ -15,7 +15,7 @@ warnings.filterwarnings('ignore')
 ### Load NER model
 model_ner = spacy.load('./output/model-best/')
 
-pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
+
 def cleanText(txt):
     whitespace = string.whitespace
     punctuation = "!#$%&\'()*+:;<=>?[\\]^`{|}~"
@@ -77,6 +77,7 @@ grp_gen = groupgen()
 
 def getPredictions(image):
     # extract data using Pytesseract 
+    pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
     tessData = pytesseract.image_to_data(image)
     # convert into dataframe
     tessList = list(map(lambda x:x.split('\t'), tessData.split('\n')))
