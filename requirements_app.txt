@@ -7,3 +7,5 @@ spacy
 imutils
 gunicorn
 scipy
+tesseract
+tesseract-ocr
