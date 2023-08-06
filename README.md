@@ -1,6 +1,6 @@
 # Business Card Data Extraction with OCR and NER
 
-This project aims to extract structured data from business cards using a combination of OpenCV, PyTesseract, and spaCy. By leveraging computer vision techniques, optical character recognition (OCR), and natural language processing (NLP), we can automate the process of extracting key information such as name, phone number, email address, and company name from business cards.
+This project aims to extract structured data from business cards using a combination of OpenCV, PyTesseract, and spaCy. By leveraging computer vision techniques, optical character recognition (OCR) and natural language processing (NLP), we can automate the process of extracting key information such as name, phone number, email address, and company name from business cards.
 
 ## Prerequisites
 
